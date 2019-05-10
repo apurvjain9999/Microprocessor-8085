@@ -1,0 +1,9 @@
+LDA 0000H
+MOV B,A
+RLC
+RLC
+RLC
+RLC
+ORA 
+
+hlt

@@ -1,0 +1,10 @@
+LXI H,2000H
+;LXI D,3000H
+;MVI B,10
+;NXT: 	MOV A,M
+;	STAX D
+;	INX H
+;	INX D
+;	DCR B
+;	JNZ NXT
+hlt

@@ -1,0 +1,11 @@
+
+lda 2000
+ral
+sta 2002
+
+ral
+sta 2004
+
+ral
+sta 2006
+hlt

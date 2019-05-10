@@ -1,0 +1,3 @@
+XRA A
+STA 0000H
+hlt

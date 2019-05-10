@@ -1,0 +1,11 @@
+lda 100
+mov b,a
+lda 101
+sub b
+sta 105
+lda 103
+mov b,a
+lda 104
+sub b
+sta 110
+hlt

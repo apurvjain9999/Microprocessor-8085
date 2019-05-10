@@ -1,0 +1,5 @@
+LXI B,00H
+LDAX H,0000H
+
+INT: 
+hlt

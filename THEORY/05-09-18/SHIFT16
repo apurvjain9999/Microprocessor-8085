@@ -1,0 +1,4 @@
+LXI H,2030H
+;DAD H
+SHLD 9000H
+hlt

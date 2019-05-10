@@ -1,0 +1,11 @@
+Lda 0
+mov b,a
+lda 1
+add b
+sta 6
+lda 2
+mov b,a
+lda 3
+adc b
+sta 7
+Hlt

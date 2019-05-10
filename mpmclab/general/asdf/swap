@@ -1,0 +1,24 @@
+
+
+
+lda 1
+
+mov b,a
+
+lda 2
+
+add b
+
+mov c,a
+
+sub b
+
+mov c,a
+
+sta 1
+
+mov a,b
+
+sta 2
+
+hlt

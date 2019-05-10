@@ -1,0 +1,33 @@
+
+;Source program
+
+       LXI SP, 27FFH       ; Initialize stack pointer
+       LDA 2800H           ; Get the number
+       CPI 02H             ; Check if number is greater than 1
+       JC LAST
+       MVI D, 00H          ; Load number as a result
+       MOV E, A
+       DCR A
+       MOV C,A             ; Load counter one less than number
+       CALL FACTO          ; Call subroutine FACTO
+       XCHG                ; Get the result in HL
+       SHLD 2201H          ; Store result in the memory
+       JMP END
+       LAST: LXI H,10H         ; Store result = 01
+       END: SHLD 2201H
+       HLT
+
+;Subroutine Program:
+
+FACTO:	LXI H, 0000H
+       	MOV B, C           ; Load counter
+BACK: 	DAD D
+       	DCR B
+       	JNZ BACK           ; Multiply by successive addition
+       	XCHG               ; Store result in DE
+       	DCR C              ; Decrement counter
+       	CNZ FACTO          ; Call subroutine FACTO
+       	RET                ; Return to main prog
+
+
+ 

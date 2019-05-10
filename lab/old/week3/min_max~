@@ -1,0 +1,21 @@
+LXI H,9000H
+MOV B,M	;Store Max 
+MOV C,M	;Store Min
+MVI D,0AH
+NXT: 	MOV A,M
+	CMP B
+	JC MIN
+	MOV B,A	
+
+MIN:	CMP C
+	JNC LEAVE
+	MOV C,A
+
+LEAVE:	INX H
+	DCR D
+	JNZ NXT
+LXI H,0000H
+MOV M,B
+;INX H
+MOV M,C
+hlt

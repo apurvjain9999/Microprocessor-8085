@@ -1,0 +1,16 @@
+LXI B,10H
+LDAX H,0000H
+LDAX D,0001H
+INT: 	MOV C,M
+	FIN:	LDAX D
+		CMP M
+		JC XCG
+		LS: 	INX D
+			JMP INT
+		XCG: 	STAX M
+			MOV A,C
+			STAX D
+			MOV C,M
+			JMP LS
+
+hlt	

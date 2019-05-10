@@ -1,0 +1,10 @@
+LDA 0000H
+MOV B,A
+CMA
+MOV C,A
+ANA B
+MOV D,A
+MOV A,C
+ORA B 
+
+hlt

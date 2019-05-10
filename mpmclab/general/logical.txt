@@ -1,0 +1,14 @@
+lda 1000
+mov b,a
+lda 1001
+ana b
+sta 1004
+lda 1001
+ora b
+sta 1006
+lda 1001	
+cma 
+sta 1008
+lda 1001
+
+hlt
